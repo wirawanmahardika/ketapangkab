@@ -8,14 +8,13 @@ import { GiBrickWall, GiVillage } from "react-icons/gi";
 import { MdTrendingUp } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-import { STRINGS } from "../utils/strings";
-import { KODE_SLUG } from "../utils/api";
+import DATAS from "../utils/datas";
 
 
 export default function Sidebar() {
     return <div className="flex flex-col items-center p-5 w-[20vw] text-white">
-        <h2 className="font-semibold text-3xl mt-3">{STRINGS[KODE_SLUG].nama}</h2>
-        <span className="text-yellow-300 text-sm text-center mt-3 capitalize">{STRINGS[KODE_SLUG].desc}</span>
+        <h2 className="font-semibold text-3xl mt-3">{DATAS.nama}</h2>
+        <span className="text-yellow-300 text-sm text-center mt-3 capitalize">{DATAS.desc}</span>
 
         <nav className="flex flex-col mt-10 w-full gap-y-6">
             <span className="font-semibold">MENU</span>
@@ -33,10 +32,7 @@ export default function Sidebar() {
             ]} />
             <Nav text="Profil Desa" url="profil-desa" icon={<GiVillage className="p-0 size-5" />} />
             <Nav text="Bansos" url="bansos" icon={<FaHandsHelping className="p-0 size-5" />} />
-            {
-                KODE_SLUG === "ketapangkab" &&
-                <Nav text="Perencanaan" url="perencanaan" icon={<AiOutlineSchedule className="p-0 size-5" />} />
-            }
+            <Nav text="Perencanaan" url="perencanaan" icon={<AiOutlineSchedule className="p-0 size-5" />} />
         </nav >
     </div >
 }
