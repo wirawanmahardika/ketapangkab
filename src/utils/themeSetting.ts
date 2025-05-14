@@ -24,7 +24,7 @@ export const sidebarStyle = { backgroundColor: DATAS.theme.color_deep }
 
 
 export const loginTextStyle = {
-    color: DATAS.theme.color_normal,
+    color: DATAS.theme.color_deep,
     boxShadow: '6px 6px 0px ' + DATAS.theme.color_deep
 }
 

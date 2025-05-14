@@ -99,7 +99,7 @@ export default function KetapangLoginPage () {
                         <img onClick={() => setShowPass((prev) => !prev)} src={showPass ? "/img/icon/show-password.svg" : "/img/icon/hide-password.svg"} alt="" className=" absolute size-5 bottom-2 right-3 cursor-pointer" />
                     </div>
 
-                    <button className="btn btn-active">Masuk</button>
+                    <button className="btn btn-neutral">Masuk</button>
                 </form>
             </div>
         </div>

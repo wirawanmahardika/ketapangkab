@@ -37,8 +37,8 @@ export default function Sidebar() {
             <Nav text="Perencanaan" url="perencanaan" icon={<AiOutlineSchedule className="p-0 size-5" />} />
         </nav >
 
-        <NavLink to={'/setting'} style={{ color: DATAS.theme.color_deep }} className="flex gap-x-3 mt-auto items-center mb-10 bg-white rounded-md w-4/5 mx-auto px-2 py-2 justify-center">
-            <IoSettings size={24} />
+        <NavLink to={'/setting'} style={{ color: DATAS.theme.color_deep }} className="flex gap-x-3 mt-auto items-center mb-10 bg-white rounded-md w-4/5 mx-auto px-2 py-2">
+            <IoSettings size={20} />
             <span className="font-semibold">Pengaturan</span>
         </NavLink>
     </div >
@@ -57,7 +57,7 @@ export function SidebarPengaturan() {
             <Nav text="Manajemen Akun" url="manajemen-akun" icon={<FaUserCog className="p-0 size-5" />} />
         </nav >
 
-        <NavLink to={'/'} style={{ color: DATAS.theme.color_deep }} className="flex gap-x-3 mt-auto items-center mb-10 bg-white rounded-md w-4/5 mx-auto px-2 py-2 justify-center">
+        <NavLink to={'/'} style={{ color: DATAS.theme.color_deep }} className="flex gap-x-6 mt-auto items-center mb-10 bg-white rounded-md w-4/5 mx-auto px-2 py-2">
             <IoIosArrowRoundBack size={24} />
             <span className="font-semibold">Dashboard SiCesa</span>
         </NavLink>
