@@ -12,6 +12,7 @@ import Wisata from "./pages/Wisata"
 import Kependudukan from "./pages/Kependudukan"
 import AdministrasiUmum from "./pages/AdministrasiUmum"
 import NotFound from "./pages/NotFound"
+import ManajemenAkun from "./pages/ManajemenAkun"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,7 +30,10 @@ const router = createBrowserRouter(
         <Route path="/kependudukan" element={<Kependudukan />} />
         <Route path="/umum" element={<AdministrasiUmum />} />
       </Route>
-      <Route path="/setting" element={<WrapperPengaturan />} errorElement={<NotFound />}></Route>
+      <Route path="/setting" element={<WrapperPengaturan />} errorElement={<NotFound />}>
+        <Route path="manajemen-akun" element={<ManajemenAkun />} />
+      
+      </Route>
     </>
   )
 )

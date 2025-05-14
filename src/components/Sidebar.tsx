@@ -54,7 +54,7 @@ export function SidebarPengaturan() {
 
             <Nav text="Halaman Login" url="/" icon={<FaUserTie className="p-0 size-5" />} />
             <Nav text="Template Dokumen" url="perencanaan" icon={<IoDocumentTextSharp className="p-0 size-5" />} />
-            <Nav text="Manajemen Akun" url="pembangunan" icon={<FaUserCog className="p-0 size-5" />} />
+            <Nav text="Manajemen Akun" url="manajemen-akun" icon={<FaUserCog className="p-0 size-5" />} />
         </nav >
 
         <NavLink to={'/'} style={{ color: DATAS.theme.color_deep }} className="flex gap-x-3 mt-auto items-center mb-10 bg-white rounded-md w-4/5 mx-auto px-2 py-2 justify-center">
