@@ -1,6 +1,6 @@
 import { createRoutesFromElements, Route, RouterProvider, createBrowserRouter } from "react-router-dom"
 import Login from "./pages/Login"
-import Wrapper from "./components/Wrapper"
+import Wrapper, { WrapperPengaturan } from "./components/Wrapper"
 import Dashboard from "./pages/Dashboard"
 import Perencanaan from "./pages/Perencanaan"
 import Pembangunan from "./pages/Pembangunan"
@@ -29,6 +29,7 @@ const router = createBrowserRouter(
         <Route path="/kependudukan" element={<Kependudukan />} />
         <Route path="/umum" element={<AdministrasiUmum />} />
       </Route>
+      <Route path="/setting" element={<WrapperPengaturan />} errorElement={<NotFound />}></Route>
     </>
   )
 )
