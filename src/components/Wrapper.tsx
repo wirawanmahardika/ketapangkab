@@ -57,7 +57,7 @@ export default function Wrapper() {
             <div className="bg-gray-200 grow overflow-y-auto flex flex-col">
                 <Outlet />
                 <div className="flex mt-auto justify-center items-center p-3 bg-white shadow text-blue-900 text-sm">
-                    <span>&copy; Powered By <span className="font-bold">PT Digidal Desa Indonesia</span></span>
+                    <span>&copy; Powered By <span className="font-bold">PT Digital Desa Indonesia</span></span>
                 </div>
             </div>
         </motion.div>
@@ -84,7 +84,7 @@ export function WrapperPengaturan() {
                     <svg onClick={() => setSidebarOpen(prev => !prev)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" className="size-8 cursor-pointer">
                         <path fillRule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
                     </svg>
-                    <span style={{color: DATAS.theme.color_deep}} className="font-bold text-xl translate-y-0.5">Dashboard {DATAS.nama}</span>
+                    <span style={{color: DATAS.theme.color_deep}} className="font-bold text-xl translate-y-0.5">Pengaturan</span>
                 </div>
 
                 <div className="dropdown">
@@ -116,7 +116,7 @@ export function WrapperPengaturan() {
             <div className="bg-gray-200 grow overflow-y-auto flex flex-col">
                 <Outlet />
                 <div className="flex mt-auto justify-center items-center p-3 bg-white shadow text-blue-900 text-sm">
-                    <span>&copy; Powered By <span className="font-bold">PT Digidal Desa Indonesia</span></span>
+                    <span>&copy; Powered By <span className="font-bold">PT Digital Desa Indonesia</span></span>
                 </div>
             </div>
         </motion.div>
