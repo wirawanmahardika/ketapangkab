@@ -53,7 +53,7 @@ export function SidebarPengaturan() {
             <span className="font-semibold">MENU</span>
 
             <Nav text="Halaman Login" url="/" icon={<FaUserTie className="p-0 size-5" />} />
-            <Nav text="Template Dokumen" url="perencanaan" icon={<IoDocumentTextSharp className="p-0 size-5" />} />
+            <Nav text="Template Dokumen" url="template-dokumen" icon={<IoDocumentTextSharp className="p-0 size-5" />} />
             <Nav text="Manajemen Akun" url="manajemen-akun" icon={<FaUserCog className="p-0 size-5" />} />
         </nav >
 

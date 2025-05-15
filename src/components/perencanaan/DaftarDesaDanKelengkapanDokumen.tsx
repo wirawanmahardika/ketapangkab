@@ -222,6 +222,11 @@ function getPaginationRange(currentPage: number, totalPages: number) {
 
 
 function TabelWithPagination({ data, loading, currentPage, setCurrentPage }: { data: KelengkapanDokumenType; loading: boolean; currentPage: number; setCurrentPage: React.Dispatch<React.SetStateAction<number>> }) {
+  const [idDetail, setIdDetail] = useState("")
+  const changeIdDetail = useCallback((id: string) => {
+    setIdDetail(id)
+  }, [])
+
   const itemsPerPage = 10;
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const paginatedData = data.slice(
@@ -237,26 +242,25 @@ function TabelWithPagination({ data, loading, currentPage, setCurrentPage }: { d
   const changePage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
+      setIdDetail("")
     }
   };
 
   const DokumenStatus = useCallback(({ setId, status, openId }: { setId: (id: string) => void, status: boolean; openId: string }) => {
     const [open, setOpen] = useState(false)
     const id = useId()
-    console.log(id);
-    
     
     return <div className="relative">
       <div onClick={() => {setId(id); setOpen(v => !v)}}>
         {status ?
           <div className="text-emerald-700 flex items-center gap-x-1 justify-center cursor-pointer">
             <span>Selesai</span>
-            <TiArrowSortedDown size={20} className={open ? "rotate-0" : "rotate-180"} />
+            <TiArrowSortedDown size={20} className={open && openId === id ? "rotate-0" : "rotate-180"} />
           </div>
           :
           <div className="text-red-700 flex items-center gap-x-1 justify-center cursor-pointer">
             <span>Belum</span>
-            <TiArrowSortedDown size={20} className={open ? "rotate-0" : "rotate-180"} />
+            <TiArrowSortedDown size={20} className={open && openId === id ? "rotate-0" : "rotate-180"} />
           </div>}
       </div>
 
@@ -276,10 +280,6 @@ function TabelWithPagination({ data, loading, currentPage, setCurrentPage }: { d
     </div>
   }, [])
 
-  const [idDetail, setIdDetail] = useState("")
-  const changeIdDetail = useCallback((id: string) => {
-    setIdDetail(id)
-  }, [])
 
   return <>
     <table className="rounded text-sm w-full mt-4">
